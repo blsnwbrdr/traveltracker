@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Chewy|Titillium+Web:300,400" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="header">Travel Tracker</h1>
+  <div id="countryList" data-toggle="buttons"></div>
+  <div id="submitButton">
+    <button id="submit" class="btn" type="button">submit</button>
+  </div>
+  <div id="map"></div>
+  <div id="generateButton"></div>
+  <ol id="visitedList"></ol>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/countries.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQW5lXcFvX7xMEAQGJWtyS1JwXljCHor8&callback=initMap"></script>
+</body>
+</html>
