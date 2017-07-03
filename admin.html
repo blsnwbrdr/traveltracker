@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+  <title>Admin</title>
+</head>
+
+<body>
+
+  <div>
+    <ul id="links">
+    </ul>
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $.ajax({
+      url: "admin.json",
+      dataType: "json",
+      success: function(data) {
+        for(x = 0; x < data.length; x++) {
+          console.log(data.length);
+          document.getElementById('links').innerHTML += '<li><a href="usermaps/' + data[x] + '" target="_blank">' + data[x] +'</a></li>';
+        }
+      }
+    })
+  </script>
+</body>
+</html>

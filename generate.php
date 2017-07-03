@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+
 $dirName = uniqid();
 mkdir("usermaps/" . $dirName);
 $newHTML = fopen("usermaps/" . $dirName . "/index.html", "w") or die("Unable to open file!");
@@ -26,4 +28,8 @@ $newJSON = fopen("usermaps/" . $dirName . "/locations.json", "w") or die("Unable
 $data = $_GET["data"];
 file_put_contents("usermaps/" . $dirName . "/locations.json", $data);
 echo json_encode($dirName);
+
+$adminJSON = json_decode(file_get_contents("admin.json"));
+array_push($adminJSON,$dirName);
+file_put_contents("admin.json", json_encode($adminJSON));
 ?>
