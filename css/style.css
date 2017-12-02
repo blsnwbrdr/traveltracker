@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body,html {
   height: 100%;
   margin: 0;
@@ -5,7 +8,8 @@ body,html {
 }
 body {
   font: normal 400 16px 'Titillium Web', sans-serif;
-  background-color: #A4D3D9;
+/*  background-color: #A4D3D9;*/
+  background: linear-gradient(90deg, #6BB7C1, #A4D3D9, #6BB7C1);
   color: #000000;
 }
 a,
@@ -25,23 +29,26 @@ h1 {
 input[type=checkbox] {
   display: none;
 }
-.btn.active,
-.btn:active {
-  box-shadow: none;
+.btn:active:focus,
+.btn:focus {
+  outline: none;
 }
 .btn-default {
   border: none;
-  color: #FFFFFF;
+  color: white;
   width: 100%;
   margin: 2px 0;
   font-size: 18px;
 }
+.btn.active,
+.btn:active,
 .btn-default:hover,
 .btn-default.active,
-.btn-default.active:focus,
 .btn-default.active:hover,
-.btn-default:active:focus,
-.btn-default:active:hover {
+.btn-default.active:focus,
+.btn-default:active,
+.btn-default:active:hover,
+.btn-default:active:focus {
   background-color: white;
   outline: none;
 }
@@ -65,7 +72,7 @@ input[type=checkbox] {
 #generateMap,
 #newMap {
   font-family: 'Chewy';
-  background-color: #FFFFFF;
+  background-color: white;
   border: none;
   padding: 10px 25px;
 }
@@ -99,41 +106,42 @@ input[type=checkbox] {
   color: #2E4E74;
 }
 @media (max-width: 1200px) {
-  .btn-default {
-    font-size: 14px;
-  }
-}
-@media (max-width: 1000px) {
   #countryList {
     column-count: 2;
-  }
-  .btn-default {
-    font-size: 18px;
-  }
+  }  
 }
 @media (max-width: 800px) {
   #countryList {
-    padding: 50px 5%;
-  }
-  .btn-default {
-    font-size: 14px;
+    column-count: 1;
+    padding: 50px 20%;
   }
 }
 @media (max-width: 600px) {
+  h1 {
+    font-size: 65px;
+    margin-top: 25px;
+    padding: 0 5%;
+  }
   #countryList {
-    padding: 50px 1%;
+    padding: 25px 10%;
   }
-  .btn-default {
-    font-size: 12px;
-  }
+  #visitedList {
+    width: 100%;
+  }  
 }
 @media (max-width: 450px) {
   #countryList {
     column-count: 1;
-    padding: 50px 10%;
+    padding: 25px 5%;
   }
-  #visitedList {
-    width: 80%;
-    font-size: 14px;
+}
+@media (max-width: 350px) {
+  .btn-default {
+    font-size: 16px;
+  }
+}
+@media (hover: none), (hover: on-demand) {
+  .btn-default:hover {
+    background-color: rgba(180,182,184,0.50);
   }
 }
