@@ -21,6 +21,8 @@ $.ajax({
     }
     // INITIALZE MAP WITH USER LOCATION DATA
     initMap();
+    // PRINT NUMBER AND PERCENT OF COUNTRIES VISITED
+    document.getElementById('congrats').innerHTML = '<p>Congrats! You have visited ' + locationName.length + ' countries.</p><p>' + Math.round(locationName.length/248*100) + '% of the 248 countries in the world.</p>'
   }
 });
 
@@ -40,9 +42,3 @@ function initMap() {
   // SET MARKER CLUSTERS
   var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 }
-
-
-
-
-
-

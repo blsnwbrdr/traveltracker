@@ -29,7 +29,7 @@ for(var v = 0; v < countryName.length; v++) {
     document.getElementById('countryList').innerHTML += even;
   } else {
     var odd = '<div><label class="btn btn-default color2"><input type="checkbox" value="' + countryName[v] + '">' + countryName[v] + '</label></div>';
-    document.getElementById('countryList').innerHTML += odd;    
+    document.getElementById('countryList').innerHTML += odd;
   }
 }
 
@@ -68,6 +68,8 @@ function selected() {
     var visitedName = '<li>' + locationName[z] + '</li>';
     document.getElementById('visitedList').innerHTML += visitedName;
   }
+  // PRINT NUMBER AND PERCENT OF COUNTRIES VISITED
+  document.getElementById('congrats').innerHTML = '<p>Congrats! You have visited ' + locationName.length + ' countries.</p><p>' + Math.round(locationName.length/248*100) + '% of the 248 countries in the world.</p>'
   // RE-INITIALIZE THE MAP WITH THE NEW DATA
   initMap();
   var buttonGenerateMap = '<button id="generateMap" class="btn animated bounce" type="button">Generate a Map to Share</button>';
@@ -90,4 +92,3 @@ function generate() {
     }
   });
 }
-
