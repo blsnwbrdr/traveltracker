@@ -8,7 +8,6 @@ body,html {
 }
 body {
   font: normal 400 16px 'Titillium Web', sans-serif;
-/*  background-color: #A4D3D9;*/
   background: linear-gradient(90deg, #6BB7C1, #A4D3D9, #6BB7C1);
   color: #000000;
 }
@@ -64,32 +63,22 @@ input[type=checkbox] {
   column-count: 3;
 }
 #submitButton,
-#generateButton {
+#shareButton {
   text-align: center;
   padding: 20px;
 }
-#submit,
-#generateMap,
-#newMap {
+#submit {
   font-family: 'Chewy';
   background-color: white;
   border: none;
   padding: 10px 25px;
 }
-#submit:hover,
-#generateMap:hover,
-#newMap:hover {
+#submit:hover {
   box-shadow: 0 0 20px 5px rgba(0,0,0,0.1);
 }
 #submit:active,
 #submit:active:focus,
-#submit:focus,
-#generateMap:active,
-#generateMap:active:focus,
-#generateMap:focus,
-#newMap:active,
-#newMap:active:focus,
-#newMap:focus{
+#submit:focus {
   outline: none;
   box-shadow: none;
 }
@@ -100,17 +89,23 @@ input[type=checkbox] {
 }
 #congrats {
   font-size: 20px;
-  width: 400px;
   margin: 0 auto;
   padding-bottom: 10px;
   color: #2E4E74;
   text-align: center;
 }
+#submitButton,
 #visitedList {
   font-size: 20px;
   width: 400px;
   margin: 0 auto;
   padding-bottom: 100px;
+  color: #2E4E74;
+}
+#shareButton {
+  font-size: 20px;
+  width: 400px;
+  margin: 0 auto;
   color: #2E4E74;
 }
 @media (max-width: 1200px) {
@@ -133,7 +128,9 @@ input[type=checkbox] {
   #countryList {
     padding: 25px 10%;
   }
-  #congrats,#visitedList {
+  #submitButton,
+  #shareButton,
+  #visitedList {
     width: 100%;
   }
 }

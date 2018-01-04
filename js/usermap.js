@@ -19,10 +19,10 @@ $.ajax({
       var visited = '<li>' + locationName[z] + '</li>';
       document.getElementById('visitedList').innerHTML += visited;
     }
+    // PRINT NUMBER AND PERCENT OF COUNTRIES VISITED
+    document.getElementById('congrats').innerHTML = '<p>Congrats! You have visited ' + locationName.length + ' countries/territories.</p><p>' + Math.round(locationName.length/247*100) + '% of 247 countries/territories around the globe.</p>'
     // INITIALZE MAP WITH USER LOCATION DATA
     initMap();
-    // PRINT NUMBER AND PERCENT OF COUNTRIES VISITED
-    document.getElementById('congrats').innerHTML = '<p>Congrats! You have visited ' + locationName.length + ' countries.</p><p>' + Math.round(locationName.length/248*100) + '% of the 248 countries in the world.</p>'
   }
 });
 
